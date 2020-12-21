@@ -35,6 +35,13 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  if (event.message.text === 'start') {
+    // create a echoing text message
+    const echo = { type: 'text', text:'start 1000'};
+
+    // use reply API
+    return client.replyMessage(event.replyToken, echo);
+  }
   // create a echoing text message
   const echo = { type: 'text', text: event.message.text };
 
