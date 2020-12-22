@@ -9,6 +9,9 @@ const config = {
   channelSecret: process.env.CHANNEL_SECRET,
 };
 
+
+// base URL for webhook server
+let baseURL = process.env.BASE_URL;
 // create LINE SDK client
 const client = new line.Client(config);
 
